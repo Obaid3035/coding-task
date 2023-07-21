@@ -101,7 +101,7 @@ function App() {
 
     let table = (
         <React.Fragment>
-            <Table data={getCurrentPageData()} onDelete={onDeleteHandler} onEdit={openEditModal} />;
+            <Table data={getCurrentPageData()} onDelete={onDeleteHandler} onEdit={openEditModal}/>;
         </React.Fragment>
     )
 
@@ -127,17 +127,25 @@ function App() {
 
             {
                 data.length > 0 && <div className={'total-sum'}>
-			        <p>Sum of Prices: {sum.toString()}</p>
-		        </div>
+					<p>Sum of Prices: {sum.toString()}</p>
+				</div>
             }
 
             <div className="pagination">
-                <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+                <Button
+                    style={{
+                    maxWidth: '100px'
+                }}
+                    onClick={handlePreviousPage} disabled={currentPage === 1}>
                     Previous
-                </button>
-                <button onClick={handleNextPage} disabled={data.length <= itemsPerPage * currentPage}>
+                </Button>
+                <Button
+                    style={{
+                    maxWidth: '100px'
+                }}
+                    onClick={handleNextPage} disabled={data.length <= itemsPerPage * currentPage}>
                     Next
-                </button>
+                </Button>
 
                 <span>{currentPage}</span>
             </div>

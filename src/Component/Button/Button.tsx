@@ -5,11 +5,12 @@ interface IButtonProps {
     children: ReactNode,
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     style?: Record<string, string>;
+    disabled?: boolean;
 }
 
-const Button: React.FC<IButtonProps> = ({children, onClick, style = {}}) => {
+const Button: React.FC<IButtonProps> = ({children, onClick, style = {}, disabled = false}) => {
     return (
-        <button style={style} className={'button'} onClick={onClick}>{
+        <button style={style} className={'button'} onClick={onClick} disabled={disabled}>{
             children
         }</button>
     );
