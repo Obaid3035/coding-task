@@ -1,0 +1,42 @@
+.table-container {
+    display: flex;
+    justify-content: center;
+    background-color: #EDE7DE;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container table th {
+    font-weight: bold;
+    background-color: #FFFFFF;
+    padding: 12px;
+}
+
+.table-container table th,
+.table-container td {
+    padding: 8px;
+    font-size: 17px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.table-container td img {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.table-container tr:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    transition: all 0.3s ease-out;
+    border-radius: 10px;
+}
